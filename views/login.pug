@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Login
+  div(id="error")
+  form(action="api/user/login" method = "POST" id="login-form")
+    label(for="email") Email
+    input(placeholder="youremail@mail.com" type="email" name="email" id="email" required)
+    br
+    label(for="password") Password
+    input(placeholder="Password" type="password" name="password" id="password" required)
+    br
+    input(type="submit" value="Login")
+  script(src="/javascripts/login.js")
